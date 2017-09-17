@@ -1419,13 +1419,13 @@ textarea {
 }
 
 a {
-  color: #3097D1;
+  color: #F2135C;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #216a94;
+  color: #af0a40;
   text-decoration: underline;
 }
 
@@ -1694,12 +1694,12 @@ mark,
 }
 
 .text-primary {
-  color: #3097D1;
+  color: #F2135C;
 }
 
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #2579a9;
+  color: #c70b49;
 }
 
 .text-success {
@@ -1743,12 +1743,12 @@ a.text-danger:focus {
 }
 
 .bg-primary {
-  background-color: #3097D1;
+  background-color: #F2135C;
 }
 
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: #2579a9;
+  background-color: #c70b49;
 }
 
 .bg-success {
@@ -3366,10 +3366,10 @@ output {
 }
 
 .form-control:focus {
-  border-color: #98cbe8;
+  border-color: #f98caf;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(152, 203, 232, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(152, 203, 232, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(249, 140, 175, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(249, 140, 175, 0.6);
 }
 
 .form-control::-moz-placeholder {
@@ -4088,29 +4088,29 @@ fieldset[disabled] .btn-default.focus {
 
 .btn-primary {
   color: #fff;
-  background-color: #3097D1;
-  border-color: #2a88bd;
+  background-color: #F2135C;
+  border-color: #df0c51;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #2579a9;
-  border-color: #133d55;
+  background-color: #c70b49;
+  border-color: #660625;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #2579a9;
-  border-color: #1f648b;
+  background-color: #c70b49;
+  border-color: #a5093c;
 }
 
 .btn-primary:active,
 .btn-primary.active,
 .open > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #2579a9;
-  border-color: #1f648b;
+  background-color: #c70b49;
+  border-color: #a5093c;
 }
 
 .btn-primary:active:hover,
@@ -4123,8 +4123,8 @@ fieldset[disabled] .btn-default.focus {
 .open > .btn-primary.dropdown-toggle:focus,
 .open > .btn-primary.dropdown-toggle.focus {
   color: #fff;
-  background-color: #1f648b;
-  border-color: #133d55;
+  background-color: #a5093c;
+  border-color: #660625;
 }
 
 .btn-primary:active,
@@ -4142,12 +4142,12 @@ fieldset[disabled] .btn-default.focus {
 fieldset[disabled] .btn-primary:hover,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary.focus {
-  background-color: #3097D1;
-  border-color: #2a88bd;
+  background-color: #F2135C;
+  border-color: #df0c51;
 }
 
 .btn-primary .badge {
-  color: #3097D1;
+  color: #F2135C;
   background-color: #fff;
 }
 
@@ -4412,7 +4412,7 @@ fieldset[disabled] .btn-danger.focus {
 }
 
 .btn-link {
-  color: #3097D1;
+  color: #F2135C;
   font-weight: normal;
   border-radius: 0;
 }
@@ -4436,7 +4436,7 @@ fieldset[disabled] .btn-link {
 
 .btn-link:hover,
 .btn-link:focus {
-  color: #216a94;
+  color: #af0a40;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4604,7 +4604,7 @@ tbody.collapse.in {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  background-color: #3097D1;
+  background-color: #F2135C;
 }
 
 .dropdown-menu > .disabled > a,
@@ -5107,7 +5107,7 @@ tbody.collapse.in {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #3097D1;
+  border-color: #F2135C;
 }
 
 .nav .nav-divider {
@@ -5167,7 +5167,7 @@ tbody.collapse.in {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #fff;
-  background-color: #3097D1;
+  background-color: #F2135C;
 }
 
 .nav-stacked > li {
@@ -5971,7 +5971,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.6;
   text-decoration: none;
-  color: #3097D1;
+  color: #F2135C;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -5995,7 +5995,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > span:focus {
   z-index: 2;
-  color: #216a94;
+  color: #af0a40;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -6008,8 +6008,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:focus {
   z-index: 3;
   color: #fff;
-  background-color: #3097D1;
-  border-color: #3097D1;
+  background-color: #F2135C;
+  border-color: #F2135C;
   cursor: default;
 }
 
@@ -6157,12 +6157,12 @@ a.label:focus {
 }
 
 .label-primary {
-  background-color: #3097D1;
+  background-color: #F2135C;
 }
 
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #2579a9;
+  background-color: #c70b49;
 }
 
 .label-success {
@@ -6234,7 +6234,7 @@ a.label:focus {
 
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #3097D1;
+  color: #F2135C;
   background-color: #fff;
 }
 
@@ -6338,7 +6338,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #3097D1;
+  border-color: #F2135C;
 }
 
 .alert {
@@ -6473,7 +6473,7 @@ a.thumbnail.active {
   line-height: 22px;
   color: #fff;
   text-align: center;
-  background-color: #3097D1;
+  background-color: #F2135C;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -6659,8 +6659,8 @@ button.list-group-item {
 .list-group-item.active:focus {
   z-index: 2;
   color: #fff;
-  background-color: #3097D1;
-  border-color: #3097D1;
+  background-color: #F2135C;
+  border-color: #F2135C;
 }
 
 .list-group-item.active .list-group-item-heading,
@@ -6678,7 +6678,7 @@ button.list-group-item {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #d7ebf6;
+  color: #fdd4e2;
 }
 
 .list-group-item-success {
@@ -7135,26 +7135,26 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-primary {
-  border-color: #3097D1;
+  border-color: #F2135C;
 }
 
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #3097D1;
-  border-color: #3097D1;
+  background-color: #F2135C;
+  border-color: #F2135C;
 }
 
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #3097D1;
+  border-top-color: #F2135C;
 }
 
 .panel-primary > .panel-heading .badge {
-  color: #3097D1;
+  color: #F2135C;
   background-color: #fff;
 }
 
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #3097D1;
+  border-bottom-color: #F2135C;
 }
 
 .panel-success {
@@ -8348,5 +8348,313 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+/***** 汎用 *****/
+
+* {
+  font-family: "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", Meiryo, Osaka, "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+body,
+div#wrap {
+  position: relative;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.hover-opa {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.hover-opa:hover {
+  opacity: .7;
+}
+
+.block {
+  display: block;
+}
+
+.is-hide {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.selected {
+  background-color: #F2135C;
+  color: white !important;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.current-step {
+  background-color: #FFD8E5 !important;
+}
+
+div.background {
+  width: calc(100% - 210px);
+  position: fixed;
+}
+
+div.background.top-back {
+  width: 100%;
+  min-height: 400px;
+  position: absolute;
+  background: url(/img/top-back.png) center center/cover no-repeat;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+#main-vis {
+  margin-left: 6%;
+  margin-bottom: 4em;
+  height: 400px;
+}
+
+#main-vis p {
+  padding-top: 3em;
+  font-size: 2em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+#main-vis .btn {
+  padding: 1.1em 3em;
+  border: 1px solid #F2135C;
+  color: #F2135C;
+  border-radius: 6px;
+  background: transparent;
+}
+
+#mov-area {
+  min-height: 2000px;
+}
+
+#mov-btn-area {
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#mov-btn-area .btn {
+  padding: 1.5em 0;
+  font-size: 13px;
+  width: 350px;
+  border: 1px solid #F2135C;
+  color: #F2135C;
+}
+
+.btn.showing {
+  border-radius: 8px 0 0 8px;
+}
+
+.btn.willshow {
+  border-radius: 0 8px 8px 0;
+}
+
+ul.mov-list {
+  text-align: left;
+}
+
+ul.mov-list li {
+  display: inline-block;
+  width: 200px;
+  margin: 0 2.6em 3.5em;
+}
+
+ul.mov-list li a {
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+  display: block;
+}
+
+.mov-list li .mov-img {
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  background-color: #eee;
+}
+
+.mov-info .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mov-info > div {
+  margin-bottom: .6em;
+}
+
+.mov-info .top > span {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.mov-info .mov-time,
+.mov-info .mov-title {
+  margin-left: .6em;
+  text-align: left;
+}
+
+.mov-info .top > span.mov-start-date {
+  text-align: right;
+}
+
+.mov-info .mov-title {
+  display: block;
+}
+
+.mov-list li .btn.reserve {
+  width: 100%;
+  border: 1px solid #F2135C;
+  padding: .8em 0;
+  border-radius: 6px;
+  color: #F2135C;
+}
+
+.sign-in-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(102, 102, 102, 0.8);
+  opacity: 0;
+  -webkit-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign-in-modal form[name=sign-in-form] {
+  max-width: 90%;
+  width: 400px;
+  padding: 1em .8em;
+  background-color: rgba(51, 51, 51, 0.7);
+  position: relative;
+}
+
+.sign-in-modal form[name=sign-in-form] .menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2em;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  color: #0d6aad;
+  background-color: rgba(170, 170, 170, 0.6);
+}
+
+.sign-in-modal form[name=sign-in-form] .form-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign-in-modal form[name=sign-in-form] .form-header .left {
+  padding: .8em;
+}
+
+.sign-in-modal form[name=sign-in-form] .form-header .left img {
+  width: 50px;
+}
+
+.sign-in-modal form[name=sign-in-form] .form-header .right {
+  margin-left: 1em;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sign-in-modal form[name=sign-in-form] .form-header .right h3 {
+  font-size: 1.3em;
+  margin-bottom: .2em;
+  color: inherit;
+}
+
+.sign-in-modal form[name=sign-in-form] .form-header .right p {
+  color: inherit;
+}
+
+/* bodyにis-menu-openクラスが付いたらモーダル表示 */
+
+body.is-menu-open .sign-in-modal {
+  opacity: 1;
+  pointer-events: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* bodyにis-menu-openクラスが付いたら#contentをぼかしフィルター付与 */
+
+body.is-menu-open #wrap {
+  pointer-events: none;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+  position: fixed;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
 

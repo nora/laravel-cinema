@@ -17,7 +17,7 @@
                             <span class="mov-start-date">2017/07/07〜</span>
                         </div>
                         <div class="bot">
-                            <span class="mov-title">{{$mov->MOV_TITLE}}</span>
+                            <span class="mov-title">{{$mov->MOV_NAME}}</span>
                         </div>
                     </div>
                 </a>

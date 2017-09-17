@@ -7,3 +7,10 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+//users
+@import "common";
+
+//pages
+@import "pages/top";
+@import "pages/sign-in-modal";

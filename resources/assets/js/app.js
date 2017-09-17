@@ -5,7 +5,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require('./bootstrap'); //jQueryを含む
+require('./sign-in-modal'); //jQueryを含む
 
 window.Vue = require('vue');
 

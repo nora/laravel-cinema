@@ -1,83 +1,116 @@
-.sign-in-modal {
+div.background {
+  width: calc(100% - 210px);
   position: fixed;
+}
+
+div.background.top-back {
+  width: 100%;
+  min-height: 400px;
+  position: absolute;
+  background: url(#{$img-file-path}top-back.png) center center /cover no-repeat;
+  z-index: -1;
   top: 0;
   left: 0;
+}
 
-  width: 100%;
-  height: 100%;
+main {
 
-  background-color: rgba(#888, 0.8);
-  opacity: 0;
-  transition: opacity .2s ease-out;
-  z-index: 2;
+}
 
-  display: none;
-  justify-content: center;
-  align-items: center;
+#main-vis {
+  margin-left: 6%;
+  margin-bottom: 4em;
 
-  form[name=sign-in-form] {
-    max-width: 90%;
-    width: 400px;
-    padding: 1em .8em;
-    background-color: rgba(#333, .7);
-    position: relative;
-    //閉じるボタン
-    .menu-close-btn{
-      position: absolute;
-      top: 20px;
-      right: 20px;
+  height: 400px;
+  p {
+    padding-top: 3em;
+    font-size: 2em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+  }
+  .btn {
+    padding: 1.1em 3em;
+    border: 1px solid $brand-primary;
+    color: $brand-primary;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0);
+  }
+}
 
-      font-size: 2em;
-      width: 30px;
-      height: 30px;
-      text-align: center;
-      line-height: 30px;
-      border-radius: 50%;
-      color: #0d6aad;
-      background-color: rgba(#aaa, .6);
-    }
-    .form-header {
-      display: flex;
-      .left {
-        padding: .8em;
-        img {
-          width: 50px;
-        }
+#mov-area {
+  min-height: 2000px;
+}
+
+#mov-btn-area {
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 50px;
+  .btn {
+    padding: 1.5em 0;
+    font-size: 13px;
+    width: 350px;
+    border: 1px solid $brand-primary;
+    color: $brand-primary;
+  }
+}
+
+.btn.showing {
+  border-radius: 8px 0 0 8px;
+}
+
+.btn.willshow {
+  border-radius: 0 8px 8px 0;
+}
+
+ul.mov-list {
+  text-align: left;
+  li {
+    display: inline-block;
+    width: 200px;
+    margin: 0 2.6em 3.5em;
+    a {
+      transition: opacity .3s ease;
+      display: block;
+      .mov-img {
+        border-radius: 10px;
+        width: 200px;
+        height: 300px;
+        background-color: #eee;
       }
-      .right {
-        margin-left: 1em;
-        flex: auto;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        h3 {
-          font-size: 1.3em;
-          margin-bottom: .2em;
-          color: inherit;
-        }
-        p {
-          color: inherit;
-        }
-      }
-
     }
   }
 }
 
-/* bodyにis-menu-openクラスが付いたらモーダル表示 */
-body.is-menu-open {
-  .sign-in-modal {
-    opacity: 1;
-    pointer-events: auto;
+.mov-info {
+  .top {
     display: flex;
+    & > span {
+      flex: auto;
+    }
+  }
+   &> div {
+     margin-bottom: .6em;
+   }
+  .mov-time,
+  .mov-title{
+    margin-left: .6em;
+    text-align: left
   }
 }
 
-/* bodyにis-menu-openクラスが付いたら#contentをぼかしフィルター付与 */
-body.is-menu-open #wrap {
-  pointer-events: none;
-  filter: blur(8px);
+.mov-info .top > span.mov-start-date {
+  text-align: right;
+}
 
-  transition: all .2s ease-out;
+.mov-info .mov-title {
+  display: block;
+}
+
+.mov-list li .btn.reserve {
+  width: 100%;
+  border: 1px solid #F2135C;
+  padding: .8em 0;
+  border-radius: 6px;
+  color: #F2135C;
+
 }
