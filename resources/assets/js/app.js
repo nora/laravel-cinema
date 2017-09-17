@@ -4,9 +4,10 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+//bootstrap
+require('./bootstrap');
 
-require('./bootstrap'); //jQueryを含む
-require('./sign-in-modal'); //jQueryを含む
+require('./sign-in-modal');
 
 window.Vue = require('vue');
 
@@ -15,9 +16,10 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+/* コメントアウト
 Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
     el: '#app'
 });
+*/

@@ -71,6 +71,7 @@ body.is-menu-open {
     opacity: 1;
     pointer-events: auto;
     display: flex;
+    z-index: 2;
   }
 }
 
