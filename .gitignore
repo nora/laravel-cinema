@@ -23,3 +23,6 @@ public/hot
 public/storage
 public/img
 public/fonts/vendor
+
+#example files
+*.example
