@@ -1,6 +1,10 @@
-<aside id="main-nav-aside">
-    <div class="logo"><a href="/eiga" class="block"><img src="img/logo.svg" alt=""></a></div>
-    <nav id="main-nav">
+<aside class="main-nav-aside">
+    <div class="logo">
+        <a href="/eiga" class="block">
+            <img src="img/logo.svg" alt="logo">
+        </a>
+    </div>
+    <nav>
         <ul>
             <li><a href="#"><i class="fa fa-home"></i><span>ホーム</span></a></li>
             <li><a href="#"><i class="fa fa-film"></i><span>上映中</span></a></li>
@@ -11,6 +15,5 @@
             <li><a href="#"><i class="fa fa-home"></i><span>チケット案内</span></a></li>
             <li><a href="#"><i class="fa fa-home"></i><span>サービス案内</span></a></li>
         </ul>
-        fa-map-signs
     </nav>
 </aside>

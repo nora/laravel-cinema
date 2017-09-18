@@ -18,7 +18,8 @@ html, body{
    min-height: 100%;
 }
 
-body, div#wrap {
+body,
+div#wrap {
     position: relative;
 }
 a {
@@ -63,4 +64,31 @@ button {
 }
 .current-step{
     background-color: #FFD8E5!important;
+}
+
+
+//
+body{
+  background-color: #0C0F1B;
+  #wrap{
+    margin-left: 110px;
+    .without-aside-nav{
+      //fixedのスペースを埋める
+      header.ghost{
+        width: 100%;
+        height: 70px;
+      }
+      .content{
+        padding: 1em;
+        min-height: 100%;
+        flex: auto;
+        position: relative;
+        z-index: 0;
+        footer {
+          margin-top: 100px;
+          text-align: center;
+        }
+      }
+    }
+  }
 }

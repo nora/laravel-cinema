@@ -1,16 +1,25 @@
-/node_modules
-/public/hot
-/public/storage
+# composer
 /storage/*.key
 /vendor
+
+#ide
 /.idea
+
+# homestead
 /.vagrant
 Homestead.json
 Homestead.yaml
+
+# node
+/node_modules
 npm-debug.log
 yarn-error.log
+
+# env
 .env
 
-## hirano
+# public
+public/hot
+public/storage
 public/img
 public/fonts/vendor

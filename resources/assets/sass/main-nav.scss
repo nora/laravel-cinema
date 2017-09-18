@@ -1,0 +1,129 @@
+//左サイドのナビゲーション
+aside.main-nav-aside {
+  position: fixed;
+  height: 100%;
+  width: 110px;
+  background: #0C0F1B;
+  color: white;
+  border-right: 1px solid rgba(149, 152, 154, .4);
+  .logo {
+    height: 70px;
+    background-color: white;
+    text-align: center;
+    img {
+      height: 70px;
+      padding: 10px 0;
+    }
+  }
+  nav {
+    ul {
+      li {
+        height: 90px;
+        border-top: 1px solid rgba(149, 152, 154, .3);
+        &:last-child {
+          border-bottom: 1px solid rgba(149, 152, 154, .3);
+        }
+        a {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          -ms-align-items: center;
+          align-items: center;
+          justify-content: center;
+
+          color: white;
+          font-size: 1.2em;
+          span {
+            display: block;
+            font-size: .9em;
+          }
+          i {
+            color: $brand-primary;
+            font-size: 38px;
+            margin-bottom: .1em;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//ヘッダーのナビゲーション
+header.main-header {
+  position: fixed;
+  z-index: 10;
+  width: calc(100% - 100px);
+  height: 70px;
+  background-color: rgba(55, 55, 65, .7);
+  form[name=mov-search-form] {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    height: 100%;
+    & > div {
+      flex: auto;
+    }
+    .left {
+      text-align: left;
+      padding-left: 2em;
+      display: flex;
+      -ms-align-items: center;
+      align-items: center;
+      h1 {
+        display: inline-block;
+        margin-right: 1.3em;
+        a {
+          color: white;
+          font-size: 2em;
+
+          display: block;
+          height: 100%;
+          -ms-align-items: center;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .search-area {
+        position: relative;
+        display: inline-block;
+        input[name=mov-title]{
+          border-radius: 1.6em;
+          border: none;
+          padding: .6em 1.2em;
+
+          width: 20em;
+        }
+        .search-area i.fa {
+          position: absolute;
+          right: 10px;
+          top: 8px;
+          color: #95989A;
+          pointer-events: none;
+        }
+      }
+    }
+    .right {
+      padding-right: 2em;
+      text-align: right;
+      button {
+        color: white;
+        padding: .6em 3em;
+        border: none;
+        border-radius: 1.6em;
+        margin-left: 2em;
+        &.login {
+          background-color: #F2135C;
+        }
+        &.reg {
+          background-color: #3A579B;
+        }
+      }
+    }
+  }
+}
+
+
+section.pan-list {
+  margin-bottom: 2em;
+}

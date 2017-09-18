@@ -8,10 +8,9 @@
 // Variables
 @import "variables";
 
-$fa-font-path: "../../../node_modules/font-awesome/fonts" !default;
-
 // Font Awesome
-@import "node_modules/font-awesome/scss/font-awesome.scss";
+$fa-font-path: "../../../node_modules/font-awesome/fonts" !default;
+@import "~font-awesome/scss/font-awesome.scss";
 
 // Bootstrap
 //@import "~bootstrap-sass/assets/stylesheets/bootstrap";
@@ -19,6 +18,9 @@ $fa-font-path: "../../../node_modules/font-awesome/fonts" !default;
 
 //users
 @import "common";
+
+//layouts
+@import "main-nav";
 
 //pages
 @import "pages/top";
