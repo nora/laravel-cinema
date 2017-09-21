@@ -10,7 +10,7 @@
         <div class="right">
             @if (Auth::guest())
                 <button class="login" class="menu-open-btn" onclick="location.href='/login'; return false;">ログイン</button>
-                <button class="reg">会員登録</button>
+                <button class="reg" onclick="location.href='/register'; return false;">会員登録</button>
             @else
                 <button class="login"　
                         onclick="event.preventDefault();

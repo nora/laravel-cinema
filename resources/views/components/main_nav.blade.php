@@ -1,7 +1,7 @@
 <aside class="main-nav-aside">
     <div class="logo">
         <a href="/eiga" class="block">
-            <img src="img/logo.svg" alt="logo">
+            <img src="{{asset('img/logo.svg')}}" alt="logo">
         </a>
     </div>
     <nav>

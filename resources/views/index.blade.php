@@ -14,7 +14,7 @@ top
         <p> HALシネマへようこそ<br/>
             あなたの見たい映画を<br/>
             すぐ予約。 </p>
-        <div class="btn">座席予約をする</div>
+        <a href="/reserve" class="btn">座席予約をする</a>
     </div>
     <section id="mov-area">
         <div id="mov-btn-area">

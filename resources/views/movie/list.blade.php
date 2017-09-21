@@ -2,7 +2,7 @@
     <ul class="mov-list">
         @foreach($mov_list as $mov)
             <li>
-                <a href="#">
+                <a href="movie/show/{{$mov->MOV_ID}}">
                     <img src="/img/mov/{{$mov->MOV_IMG}}" alt="1" class="mov-img">
                     <div class="mov-time-meter">
                         <span class="meter1">&nbsp;</span>
@@ -22,7 +22,7 @@
                     </div>
                 </a>
                 <div class="btn reserve">
-                    <a href="#" class="block">すぐに座席予約</a>
+                    <a href="reserve/{{$mov->MOV_ID}}" class="block">すぐに座席予約</a>
                 </div>
             </li>
         @endforeach

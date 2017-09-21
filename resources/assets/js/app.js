@@ -7,9 +7,12 @@
 //bootstrap
 require('./bootstrap');
 
+//ログインモーダル
 require('./sign-in-modal');
 
-window.Vue = require('vue');
+//pages
+require('./pages/reserve')
+//window.Vue = require('vue');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

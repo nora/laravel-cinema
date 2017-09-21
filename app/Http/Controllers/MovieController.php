@@ -10,7 +10,7 @@ class MovieController extends Controller
     //topPage
     public function top(){
         $mov_list = Movie::query()
-            ->orderBy('MOV_CODE', 'desc')
+            ->orderBy('MOV_ID', 'ASC')
             ->take(16)
             ->get();
 

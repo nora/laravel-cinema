@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
+    //tableName
+    protected $primaryKey = 'USER_ID';
 
     /**
      * The attributes that are mass assignable.
@@ -26,4 +28,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    //relations
+    public function reserves()
+    {
+        return $this->hasMany('App\Reserve');
+    }
 }

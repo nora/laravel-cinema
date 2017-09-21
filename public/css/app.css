@@ -126,6 +126,8 @@ table {
   clear: both;
 }
 
+/* オリジナル */
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3676,5 +3678,198 @@ body.is-menu-open #wrap {
   position: fixed;
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
+}
+
+main.reserve.page1 {
+  padding: 0 3em;
+}
+
+main.reserve.page1 .page-title {
+  text-align: center;
+}
+
+main.reserve.page1 h2 {
+  font-size: 2em;
+}
+
+main.reserve.page1 h3 {
+  font-weight: normal;
+  border-bottom: 2px solid #F2135C;
+  padding: .6em 3em 1em;
+  display: inline-block;
+}
+
+main.reserve.page1 .mov-info {
+  padding: 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+main.reserve.page1 .mov-info img {
+  width: 200px;
+  height: 300px;
+}
+
+main.reserve.page1 .text-area {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 48px;
+}
+
+main.reserve.page1 h4 {
+  font-size: 3em;
+  font-weight: normal;
+  color: #95989a;
+  margin-bottom: 20px;
+}
+
+main.reserve.page1 .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 3em;
+  margin-bottom: 1.1em;
+}
+
+main.reserve.page1 .detail > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+main.reserve.page1 .detail b {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+main.reserve.page1 .theater-list {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.reserve.page1 .theater-list li {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  list-style: none;
+  margin: 0 2em;
+  font-size: 2em;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+main.reserve.page1 .theater-list li input[type=radio] {
+  display: none;
+}
+
+main.reserve.page1 .theater-list li input[type=radio]:checked + label {
+  background-color: #F2135C;
+}
+
+main.reserve.page1 .theater-list li label {
+  border-radius: 12px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding: .6em 0;
+  cursor: pointer;
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+main.reserve.page1 .rinji {
+  border: 2px solid #F2135C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.reserve.page1 .mov-date {
+  height: 150px;
+  margin-bottom: 2em;
+  font-size: 3em;
+}
+
+main.reserve.page1 .btm-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 800px;
+}
+
+main.reserve.page1 .mov-schedule {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding: 2em 3em;
+  margin-right: 30px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+main.reserve.page1 .mov-schedule ul {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+main.reserve.page1 .mov-schedule li {
+  padding: 3em 1em 0;
+  width: 30%;
+  height: 130px;
+  display: inline-block;
+  border: white solid 1px;
+  cursor: pointer;
+}
+
+main.reserve.page1 .showing-time {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+main.reserve.page1 .mov-schedule li span {
+  display: block;
+}
+
+main.reserve.page1 .mov-icon {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 

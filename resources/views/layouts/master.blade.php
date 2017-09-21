@@ -21,7 +21,7 @@
     <div class="without-aside-nav">
         <header class="ghost">&nbsp;</header>
         <div class="content">
-            <section class="pan-list"> ホーム &gt; アメリカンビューティー</section>
+            <section class="pan-list"> ホーム > * </section>
             <main class="@yield('main-class')">
                 @yield('main')
             </main>
