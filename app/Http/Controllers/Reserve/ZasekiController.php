@@ -21,14 +21,8 @@ class ZasekiController extends Controller
         $movInfo = Movie::find($id);
         $theaters = Theater::all();
         $schedules = Schedule::with('screen')->where('MOV_ID', $id)->get();
-        $today = Carbon::today();
 
-        $showDays = array();
-
-        for ($i=1; $i>=7; $i++) {
-            $showDays[] = $today->addDay(i);
-        }
-
+        $today =  Carbon::today();
         return view('reserve.index',compact('movInfo', 'theaters', 'schedules', 'showDays', 'today'));
     }
 

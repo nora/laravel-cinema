@@ -45,12 +45,13 @@
     </div>
     <div class="mov-date rinji">
         <ul>
-            @foreach($showDays as $day)
+            @for($i=1; $i<=7; $i++)
                 <li>
-                    {{Form::radio('day', $day->format('ymd'), false, ['id' => "radio-day{$day->format('ymd')}"])}}
-                    {{Form::label("radio-day{$day->format('ymd')}", $day->format('ymd'))}}
+                    {{Form::radio('day', $today->format('ymd'), false, ['id' => "radio-day{$today->format('ymd')}"])}}
+                    {{Form::label("radio-day{$today->format('ymd')}", $today->format('m月d日'))}}
                 </li>
-            @endforeach
+                @php($today->addDay(1))
+            @endfor
         </ul>
     </div>
     <div class="btm-area">
