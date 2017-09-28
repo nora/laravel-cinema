@@ -3822,7 +3822,12 @@ main.reserve.page1 .rinji {
 main.reserve.page1 .mov-date {
   height: 150px;
   margin-bottom: 2em;
-  font-size: 3em;
+}
+
+main.reserve.page1 .mov-date ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main.reserve.page1 .btm-area {

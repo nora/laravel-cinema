@@ -1,5 +1,6 @@
 main.reserve.page1{
   padding: 0 3em;
+  min-height: 1000px;
   .page-title{
     text-align: center;
   }
@@ -87,7 +88,17 @@ main.reserve.page1{
   .mov-date{
     height: 150px;
     margin-bottom: 2em;
-    font-size: 3em;
+    ul{
+      display: flex;
+      li{
+        padding: 1em .8em;
+        margin: 1em;
+        border:1px solid white;
+        label{
+
+        }
+      }
+    }
   }
   .btm-area{
     display: flex;

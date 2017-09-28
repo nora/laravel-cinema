@@ -12,19 +12,28 @@ let mix = require('laravel-mix');
  */
 
 mix.webpackConfig({
-        module: {
-            rules: [{
-                test: /\.scss/,
-                enforce: "pre",
-                loader: 'import-glob-loader'
-            }]
-        }
-    })
+    module: {
+        rules: [{
+            test: /\.scss/,
+            enforce: "pre",
+            loader: 'import-glob-loader'
+        }]
+    },
+    devServer: {
+        port: 8080,
+        host: 'localhost',
+        historyApiFallback: {
+            index: 'index.php',
+        },
+    }
+})
     .js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css')
-    .version(); //cache busting
+    .sass('resources/assets/sass/app.scss', 'public/css');
 
 
+//mix.version(); //cache busting
+
+//browserSync
 mix.browserSync({
     files: [
         "resources/views/**/*.blade.php",
@@ -32,10 +41,8 @@ mix.browserSync({
         "public/**/*.*",
 
     ],
-    /*
     proxy: {
-        //target: "homestead:app",
+        target: "localhost:8000",
     },
-    */
-    open: false
+    open: true,
 });

@@ -1,4 +1,3 @@
-$('.theater-list li').click(function () {
-   $('.theater-list li').removeClass('selected')
-   $(this).addClass('selected') ;
+$('.mov-date-list input').change(function () {
+   $('.btm-area').fadeIn(100);
 });

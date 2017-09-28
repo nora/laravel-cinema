@@ -10,7 +10,7 @@
     <title>HALシネマ | @yield('title')</title>
 
     @section('styles')
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     @show
 </head>
 <body class="@yield('body-class')">
@@ -29,8 +29,7 @@
         </div>
     </div>
 </div>
-@section('scripts')
-    <script src="{{ asset('js/app.js') }}"></script>
-@show
+    <script src="{{ mix('js/app.js') }}"></script>
+    @yield('js')
 </body>
 </html>

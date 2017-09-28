@@ -16,7 +16,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::prefix('reserve')->namespace('Reserve')
     ->group(function () {
         Route::name('index')
-            ->get('/{id}', 'ZasekiController@index')
+            ->get('/{id}', 'ZasekiController@schedule')
+            ->where('id', '[0-9]+');
+        Route::name('schedule')
+            ->get('/{id}/schedule/', 'ZasekiController@schedule')
+            ->where('id', '[0-9]+');
+        Route::name('zaseki')
+            ->get('/{id}/zaseki/', 'ZasekiController@zaseki')
             ->where('id', '[0-9]+');
         # /reserve/comment
         Route::name('/comment')

@@ -44,7 +44,7 @@
         </div>
     </div>
     <div class="mov-date rinji">
-        <ul>
+        <ul class="mov-date-list">
             @for($i=1; $i<=7; $i++)
                 <li>
                     {{Form::radio('day', $today->format('ymd'), false, ['id' => "radio-day{$today->format('ymd')}"])}}
@@ -54,7 +54,7 @@
             @endfor
         </ul>
     </div>
-    <div class="btm-area">
+    <div class="btm-area" style="display: none;">
         <div class="mov-schedule rinji">
             <ul>
                 @foreach($schedules as $key => $schedule)
@@ -71,4 +71,8 @@
             アイコン
         </div>
     </div>
+@endsection
+
+@section('js')
+    <script src="{{mix('js/zaseki1.js')}}"></script>
 @endsection

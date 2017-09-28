@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Reserve;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ReserveRequest;
 use App\Movie;
 use App\Theater;
 use App\Schedule;
@@ -16,14 +17,18 @@ class ZasekiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function schedule($id)
     {
         $movInfo = Movie::find($id);
         $theaters = Theater::all();
         $schedules = Schedule::with('screen')->where('MOV_ID', $id)->get();
 
         $today =  Carbon::today();
-        return view('reserve.index',compact('movInfo', 'theaters', 'schedules', 'showDays', 'today'));
+        return view('reserve.schedule',compact('movInfo', 'theaters', 'schedules', 'showDays', 'today'));
+    }
+    public function zaseki($id, ReserveRequest $request)
+    {
+
     }
 
     /**
