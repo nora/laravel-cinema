@@ -5,7 +5,7 @@
 @endsection
 
 @section('main-class')
-    reserve page1
+    reserve zaseki
 @endsection
 
 @section('main')

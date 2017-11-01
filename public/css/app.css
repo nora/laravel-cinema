@@ -3682,6 +3682,7 @@ body.is-menu-open #wrap {
 
 main.reserve.page1 {
   padding: 0 3em;
+  min-height: 1000px;
 }
 
 main.reserve.page1 .page-title {
@@ -3828,6 +3829,12 @@ main.reserve.page1 .mov-date ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+main.reserve.page1 .mov-date ul li {
+  padding: 1em .8em;
+  margin: 1em;
+  border: 1px solid white;
 }
 
 main.reserve.page1 .btm-area {
