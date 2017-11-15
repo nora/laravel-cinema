@@ -23,6 +23,7 @@ public/hot
 public/storage
 public/img
 public/fonts/vendor
+public/mix-manifest.json
 
 #example files
 *.example
