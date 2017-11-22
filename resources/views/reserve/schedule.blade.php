@@ -59,7 +59,7 @@
             <ul>
                 @foreach($schedules as $key => $schedule)
                     <li>
-                        <a href="">
+                        <a href="./{{$mov_id}}/{{$schedule->SCHEDULE_ID}}">
                             <span class="showing-time">{{$schedule->MOV_START_TIME}}〜{{$schedule->MOV_END_TIME}}</span>
                             <span class="showing-screen">Screen {{$schedule->screen->SCREEN_NO}}</span>
                         </a>

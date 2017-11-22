@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sheet extends Model
+class Seat extends Model
 {
     //tableInfo
-    protected $table = 'SHEET_MST';
-    protected $primaryKey = 'SHEET_ID';
+    protected $table = 'SEAT_MST';
+    protected $primaryKey = 'SEAT_ID';
 
     //relations
     public function screen()

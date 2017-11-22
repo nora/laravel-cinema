@@ -16,14 +16,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::prefix('reserve')->namespace('Reserve')
     ->group(function () {
         Route::name('index')
-            ->get('/{id}', 'ZasekiController@schedule')
-            ->where('id', '[0-9]+');
-        Route::name('schedule')
-            ->get('/{id}/schedule/', 'ZasekiController@schedule')
-            ->where('id', '[0-9]+');
+            ->get('/{mov_id}/', 'ZasekiController@schedule')
+            ->where('mov_id', '[0-9]+');
         Route::name('zaseki')
-            ->get('/{id}/zaseki/', 'ZasekiController@zaseki')
-            ->where('id', '[0-9]+');
+            ->get('/{mov_id}/{schedule_id}/', 'ZasekiController@zaseki')
+            ->where('mov_id', '[0-9]+')
+            ->where('schedule_id', '[0-9]+');
+        Route::name('ticket')
+            ->get('/{mov_id}/{schedule_id}/ticket/', 'ZasekiController@ticket')
+            ->where('mov_id', '[0-9]+')
+            ->where('schedule_id', '[0-9]+');
         # /reserve/comment
         Route::name('/comment')
             ->middleware('auth')

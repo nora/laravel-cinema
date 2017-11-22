@@ -7,6 +7,7 @@ use App\Http\Requests\ReserveRequest;
 use App\Movie;
 use App\Theater;
 use App\Schedule;
+use App\Seat;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -20,20 +21,24 @@ class ZasekiController extends Controller
 
     private $movInfo;
     public function __construct(Request $request){
-        $id = $request->id;
-        $this->movInfo = Movie::find($id);
+        $mov_id = $request->mov_id;
+        $this->movInfo = Movie::find($mov_id);
     }
 
-    public function schedule($id)
+    public function schedule($mov_id)
     {
-        //$movInfo = $this->movInfo;
         $movInfo = $this->movInfo;
         $theaters = Theater::all();
-        $schedules = Schedule::with('screen')->where('MOV_ID', $id)->get();
-
+        $schedules = Schedule::with('screen')->where('MOV_ID', $mov_id)->get();
+        foreach ($schedules as $key => &$schedule) {
+            $schedule->MOV_START_TIME = $this->dateFormatFromSql('H:i', $schedule->MOV_START_TIME);
+            $schedule->MOV_END_TIME = $this->dateFormatFromSql('H:i', $schedule->MOV_END_TIME);
+        }
         $today =  Carbon::today();
+
         return view('reserve.schedule',
             compact(
+                'mov_id',
                 'movInfo',
                 'theaters',
                 'schedules',
@@ -41,10 +46,40 @@ class ZasekiController extends Controller
                 'today'
             ));
     }
-    public function zaseki($id, ReserveRequest $request)
+    public function zaseki($mov_id, $schedule_id)
     {
+        //映画情報
         $movInfo = $this->movInfo;
+        //スケジュールIDからスケジュール情報
+        $schedule = Schedule::with('screen')->find($schedule_id);
+        //席情報
+        $seats = Seat::where('SCREEN_ID', $schedule_id)
+            ->orderBy('ROW', 'ASC')
+            ->orderBy('COLUMN', 'ASC')
+            ->get();
+        //m_id: MOVIE_ID
+        //s_id: SCHEDULE_ID
+
+        //export textの生成
+        $schedule->EX_TEXT = sprintf(
+            '%s (%s) %s〜%s スクリーン%s',
+            $this->dateFormatFromSql('m月d日', $schedule->MOV_START_TIME),
+            $this->jpweek(strtotime($schedule->MOV_START_TIME)),
+            $this->dateFormatFromSql('H:i', $schedule->MOV_START_TIME),
+            $this->dateFormatFromSql('H:i', $schedule->MOV_END_TIME),
+            $schedule->screen->SCREEN_NO
+        );
+
         return view('reserve.zaseki',
+            compact(
+                'movInfo',
+                'schedule',
+                'seats'
+            ));
+    }
+    public function ticket($mov_id){
+
+        return view('reserve.ticket',
             compact(
                 'movInfo'
             ));
@@ -114,5 +149,10 @@ class ZasekiController extends Controller
     public function destroy($id)
     {
         //
+    }
+    //mysqlのdatetimeからhh:mmの形式に変換
+    public function dateFormatFromSql($format, $date)
+    {
+        return date($format, strtotime($date));
     }
 }

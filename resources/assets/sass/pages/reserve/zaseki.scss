@@ -1,90 +1,146 @@
 @charset "utf-8";
-.page-title{
-   text-align: center;
-}
-main{
-   max-width: 1000px;
-   margin: 0 auto;
-}
-.page-title h2 {
-   font-size: 2em;
-}
-.page-title h3{
-   font-weight:normal;
-   border-bottom: 2px solid #F2135C;
-   padding:.6em 3em 1em;
-   display: inline-block;
-}
-.page-title{
-   margin-bottom: 2em;
-}
-.step-bar{
-   font-size: 0;
-   margin-bottom: 30px;
-}
-.step-bar li{
-   font-size: 12px;
-   width: 160px;
-   text-align: center;
-   display: inline-block;
-   padding: 1.6em 0;
+main.reserve.zaseki {
+  .zaseki-list {
+    width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    .row {
+      margin-bottom: 1rem;
+    }
+    .seat {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      input {
+        display: none;
+        &:checked + label {
+          svg{
+            fill: $brand-primary;
+          }
+        }
+      }
+      label {
+        display: block;
+        cursor: pointer;
+        svg{
+          fill: #4b4b4b;
+        }
+      }
+    }
+  }
+  //old css
+  width: 1000px;
+  margin: 0 auto;
+  .page-title {
+    text-align: center;
+  }
+  .page-title h2 {
+    font-size: 2em;
+  }
+  .page-title h3 {
+    font-weight: normal;
+    border-bottom: 2px solid #F2135C;
+    padding: .6em 3em 1em;
+    display: inline-block;
+  }
+  .page-title {
+    margin-bottom: 2em;
+  }
+  .step-bar {
+    font-size: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .step-bar li {
+    font-size: 12px;
+    width: 160px;
+    text-align: center;
+    display: inline-block;
+    padding: 1.6em 0;
 
-   background-color: white;
-   color: #95989A;
-}
+    background-color: white;
+    color: #95989A;
+  }
 
-.step-bar li:not(:last-child){
-   margin-right: 50px;
-}
-.reserve-info{
-   height: 150px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  .step-bar li:not(:last-child) {
+    margin-right: 24px;
+  }
+  .reserve-info {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-   margin-bottom: 30px;
-}
-.rinji{
-   background-color: white;
-   color: #95989A;
-}
-.reserve-area{
-   padding: 2.5em 4em;
-}
-.reserve-area h3{
-   text-align: center;
-   margin-bottom: 1em;
-}
-.reserve-area .text{
-   margin-bottom: 2em;
-}
-h4.screen-info{
-   text-align: center;
-   margin-bottom: 2em;
-}
-#zaseki{
-   width: 480px;
-   margin: 0 auto;
-   text-align: center;
-}
-label{
-   cursor: pointer;
-   display: inline-block;
-   margin-right: .6em;
-   margin-bottom: 3em;
-}
-span.zaseki{
-   display: inline-block;
-   border: 2px solid #F2135C;
+    margin-bottom: 30px;
+  }
+  .reserve-area {
+    padding: 2.5em 4em;
+    background-color: white;
+    .text {
+      color: #95989A;
+      margin-bottom: 2em;
+      h3 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      p{
+        margin-bottom: .7rem;
+        text-align: center;
+      }
+    }
+  }
+  .btn-area{
+    margin-top: 3rem;
+    button{
+      color: #95989A;
+      border: 1px solid #ccc;
+      font-size: 1.1rem;
+      width: 120px;
+      padding: .8rem 0;
+      &:first-of-type{
+        margin-right: 2rem;
+      }
+    }
+  }
+  h4.screen-info {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #666;
+  }
 
-   height: 28px;
-   width: 18px;
-   border-radius: 8px;
-}
-input.zaseki{
-   display: none;
-}
-input.zaseki:checked + span.zaseki{
-   background-color: #F2135C;
-   transition: background-color .3s ease;
+  .mov-info{
+    padding: 2em 0;
+    display: flex;
+    img{
+      width:200px;
+      height: 300px;
+    }
+    .text-area{
+      flex:auto;
+      display: flex;
+      flex-direction: column;
+      padding-left: 48px;
+      h4{
+        font-size: 3em;
+        font-weight: normal;
+        color: #95989a;
+        margin-bottom: 20px;
+      }
+      .detail{
+        display: flex;
+        flex-direction: row;
+        padding-left: 3em;
+        margin-bottom: 1.1em;
+        &>div{
+          display: flex;
+          flex-direction: column;
+          flex: auto;
+        }
+        b{
+          font-size: 1.5em;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
