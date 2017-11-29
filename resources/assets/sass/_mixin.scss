@@ -1,0 +1,8 @@
+@mixin hover-opacity(){
+  transition: background-color .2s ease,
+              opacity .2s ease;
+  &:hover{
+    background-color: rgba(white, .1);
+    opacity: .8;
+  }
+}
