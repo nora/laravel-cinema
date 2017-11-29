@@ -45,14 +45,17 @@
             @php($preRow = $seats->first()->ROW)
             <div>
                 @foreach($seats as $seat)
-                    @if($seat->COLUMN === 1)
+                @if($seat->COLUMN === 1)
             </div>
             <div class="row {{$seat->ROW}}">
                 @endif
                 <div class="seat">
-                    <input type="checkbox" value="{{$seat->ROW}}-{{$seat->COLUMN}}"
-                           id="{{$seat->ROW}}-{{$seat->COLUMN}}">
-                    <label for="{{$seat->ROW}}-{{$seat->COLUMN}}">
+                    <input type="checkbox"
+                           name="seats[]"
+                           value="{{$seat->SEAT_ID}}"
+                           id="{{$seat->SEAT_ID}}"
+                           data-row-col="{{$seat->ROW}}-{{$seat->COLUMN}}">
+                    <label for="{{$seat->SEAT_ID}}">
                         @include('components/seat_svg')
                     </label>
                 </div>

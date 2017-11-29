@@ -8,10 +8,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>HALシネマ | @yield('title')</title>
-
     @section('styles')
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     @show
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 </head>
 <body class="@yield('body-class')">
 @include('components/sign_in_modal')

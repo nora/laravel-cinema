@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Reserve;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ReserveRequest;
+use App\Http\Requests\TicketRequest;
 use App\Movie;
 use App\Theater;
 use App\Schedule;
@@ -29,7 +30,7 @@ class ZasekiController extends Controller
     {
         $movInfo = $this->movInfo;
         $theaters = Theater::all();
-        $schedules = Schedule::with('screen')->where('MOV_ID', $mov_id)->get();
+        $schedules = Schedule::where('MOV_ID', $mov_id)->get();
         foreach ($schedules as $key => &$schedule) {
             $schedule->MOV_START_TIME = $this->dateFormatFromSql('H:i', $schedule->MOV_START_TIME);
             $schedule->MOV_END_TIME = $this->dateFormatFromSql('H:i', $schedule->MOV_END_TIME);
@@ -51,7 +52,7 @@ class ZasekiController extends Controller
         //映画情報
         $movInfo = $this->movInfo;
         //スケジュールIDからスケジュール情報
-        $schedule = Schedule::with('screen')->find($schedule_id);
+        $schedule = Schedule::find($schedule_id);
         //席情報
         $seats = Seat::where('SCREEN_ID', $schedule_id)
             ->orderBy('ROW', 'ASC')
@@ -77,11 +78,22 @@ class ZasekiController extends Controller
                 'seats'
             ));
     }
-    public function ticket($mov_id){
+    public function ticket(Request $request, $mov_id, $schedule_id){
+        $seats = Seat::whereIn('SEAT_ID', $request->all());
+        $ticket_cnt =
+
+        $movInfo = $this->movInfo;
+        $schedule = Schedule::find($schedule_id);
+        $schedule->date = $this->dateFormatFromSql('m月d日', $schedule->MOV_START_TIME);
+        $schedule->start = $this->dateFormatFromSql('H:i', $schedule->MOV_START_TIME);
+        $schedule->end = $this->dateFormatFromSql('H:i', $schedule->MOV_END_TIME);
 
         return view('reserve.ticket',
             compact(
-                'movInfo'
+                'movInfo',
+                'schedule',
+                'seats',
+                'show_date'
             ));
     }
 
