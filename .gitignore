@@ -1,6 +1,7 @@
 # composer
 /storage/*.key
 /vendor
+package-lock.json
 
 #ide
 /.idea
@@ -24,6 +25,9 @@ public/storage
 public/img
 public/fonts/vendor
 public/mix-manifest.json
+
+#ide helper
+_ide_helper.php
 
 #example files
 *.example

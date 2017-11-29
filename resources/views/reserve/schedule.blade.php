@@ -54,10 +54,11 @@
             <ul>
                 @foreach($schedules as $key => $schedule)
                     <li>
-                            <span class="showing-time">{{$schedule->MOV_START_TIME}}〜{{$schedule->MOV_END_TIME}}</span>
-                            <div class="purchase-btn">
-                                <a href="./{{$mov_id}}/{{$schedule->SCHEDULE_ID}}">◎&nbsp購入</a>
-                            </div>
+                        <span class="showing-time">{{$schedule->MOV_START_TIME}}〜{{$schedule->MOV_END_TIME}}</span>
+                        <span class="screen">スクリーン {{$schedule->screen->SCREEN_NO}}</span>
+                        <div class="purchase-btn">
+                            <a href="./{{$mov_id}}/{{$schedule->SCHEDULE_ID}}">&#x25CE; 購入</a>
+                        </div>
                     </li>
                 @endforeach
             </ul>

@@ -5,7 +5,7 @@
 @endsection
 
 @section('main-class')
-    reserve ticket
+    reserve user
 @endsection
 
 @section('main')
@@ -15,8 +15,8 @@
     </div>
     <ul class="step-bar">
         <li>座席予約</li>
-        <li class="current-step">券種選択</li>
-        <li>お客様情報入力</li>
+        <li>券種選択</li>
+        <li class="current-step">お客様情報入力</li>
         <li>決済情報入力</li>
         <li>完了</li>
     </ul>
@@ -49,43 +49,37 @@
                 </li>
                 <li>
                     <label>枚数</label>
-                    <span>2枚 [A-1, A-2]</span>
+                    <span>{{$seats->count()}}枚 [A-1]</span>
                 </li>
             </ul>
         </div>
     </div>
     <form class="reserve-area" name="zaseki" method="get"
-          action="./user">
+          action="./{{$schedule->SCHEDULE_ID}}/ticket/">
         <div class="text">
-            <h3>券種選択</h3>
-            <p>鑑賞券の種類を選択してください。</p>
+            <h3>お客様情報入力</h3>
         </div>
-        <div class="ticket-list">
-            <div class="t-head">
-                <span class="no">No.</span>
-                <span class="seat">座席番号</span>
-                <span class="ticket">券種名/料金</span>
-            </div>
+        <div class="user-info">
             <ul>
                 <li>
-                    <span class="no">01</span>
-                    <span class="seat">A-1</span>
-                    <span class="ticket">
-                        <select name="ticket" id="">
-                            <option value="1">おとな：1500円</option>
-                            <option value="2">こども：1000円</option>
-                        </select>
-                    </span>
+                    <label>氏名</label>
+                    <input type="text" name="name">
                 </li>
                 <li>
-                    <span class="no">02</span>
-                    <span class="seat">A-2</span>
-                    <span class="ticket">
-                        <select name="ticket" id="">
-                            <option value="1">おとな：1500円</option>
-                            <option value="2">こども：1000円</option>
-                        </select>
-                    </span>
+                    <label>氏名(かな)</label>
+                    <input type="text" name="name">
+                </li>
+                <li>
+                    <label>電話番号</label>
+                    <input type="text" name="name">
+                </li>
+                <li>
+                    <label>メールアドレス</label>
+                    <input type="text" name="name">
+                </li>
+                <li>
+                    <label>メールアドレス(確認)</label>
+                    <input type="text" name="name">
                 </li>
             </ul>
         </div>

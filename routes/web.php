@@ -26,6 +26,10 @@ Route::prefix('reserve')->namespace('Reserve')
             ->get('/{mov_id}/{schedule_id}/ticket/', 'ZasekiController@ticket')
             ->where('mov_id', '[0-9]+')
             ->where('schedule_id', '[0-9]+');
+        Route::name('user')
+            ->get('/{mov_id}/{schedule_id}/user/','ZasekiController@user')
+            ->where('mov_id', '[0-9]+')
+            ->where('schedule_id', '[0-9]+');
         # /reserve/comment
         Route::name('/comment')
             ->middleware('auth')

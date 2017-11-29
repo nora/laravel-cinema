@@ -53,6 +53,9 @@ class ZasekiController extends Controller
         $movInfo = $this->movInfo;
         //スケジュールIDからスケジュール情報
         $schedule = Schedule::find($schedule_id);
+        $schedule->date = $this->dateFormatFromSql('m月d日', $schedule->MOV_START_TIME);
+        $schedule->start = $this->dateFormatFromSql('H:i', $schedule->MOV_START_TIME);
+        $schedule->end = $this->dateFormatFromSql('H:i', $schedule->MOV_END_TIME);
         //席情報
         $seats = Seat::where('SCREEN_ID', $schedule_id)
             ->orderBy('ROW', 'ASC')
@@ -79,8 +82,9 @@ class ZasekiController extends Controller
             ));
     }
     public function ticket(Request $request, $mov_id, $schedule_id){
+        $seatList = $request->all();
+        $request->session()->put('seats', $seatList);
         $seats = Seat::whereIn('SEAT_ID', $request->all());
-        $ticket_cnt =
 
         $movInfo = $this->movInfo;
         $schedule = Schedule::find($schedule_id);
@@ -88,13 +92,34 @@ class ZasekiController extends Controller
         $schedule->start = $this->dateFormatFromSql('H:i', $schedule->MOV_START_TIME);
         $schedule->end = $this->dateFormatFromSql('H:i', $schedule->MOV_END_TIME);
 
+
         return view('reserve.ticket',
             compact(
                 'movInfo',
                 'schedule',
                 'seats',
                 'show_date'
-            ));
+            )
+        );
+    }
+    public function user(Request $request, $mov_id, $schedule_id){
+        $seatList = $request->session()->get('seats');
+
+        $movInfo = $this->movInfo;
+        $schedule = Schedule::find($schedule_id);
+        $schedule->date = $this->dateFormatFromSql('m月d日', $schedule->MOV_START_TIME);
+        $schedule->start = $this->dateFormatFromSql('H:i', $schedule->MOV_START_TIME);
+        $schedule->end = $this->dateFormatFromSql('H:i', $schedule->MOV_END_TIME);
+        $seats = Seat::whereIn('SEAT_ID', $seatList);
+
+        return view('reserve.user',
+            compact(
+                'movInfo',
+                'schedule',
+                'seats',
+                'show_date'
+            )
+        );
     }
 
     /**

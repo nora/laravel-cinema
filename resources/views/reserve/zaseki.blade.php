@@ -21,17 +21,7 @@
         <li>完了</li>
     </ul>
 
-    <div class="mov-info">
-        <div class="img-area">
-            <img src="{{asset('img/mov/'.$movInfo->MOV_IMG)}}" alt="">
-        </div>
-        <div class="text-area">
-            <p class="title">{{$schedule->MOV_NAME}}</p>
-            <p class="schedule">{{$schedule->MOV_NAME}}</p>
-            <p class="screen">{{$schedule->MOV_NAME}}</p>
-            <p class="screen">{{$schedule->EX_TEXT}}</p>
-        </div>
-    </div>
+    @include('reserve.partials.mov-info')
     <form class="reserve-area" name="zaseki" method="get"
           action="./{{$schedule->SCHEDULE_ID}}/ticket/">
         <div class="text">
@@ -40,7 +30,7 @@
             <p>選択中の座席を解除する場合は、もう一度、座席をクリックしてください。<br>
                 座席選択後に次のSTEPにて購入方法をお選びください。</p>
         </div>
-        <h4 class="screen-info">名古屋HALシネマ スクリーン9</h4>
+        <h4 class="screen-info">名古屋HALシネマ スクリーン{{$schedule->screen->SCREEN_NO}}</h4>
         <div class="zaseki-list">
             @php($preRow = $seats->first()->ROW)
             <div>
@@ -63,7 +53,7 @@
                 @endforeach
             </div>
             <div class="btn-area">
-                <button type="button">戻る</button>
+                <button type="button" onclick="history.back()">戻る</button>
                 <button type="submit">次へ進む</button>
             </div>
         </div>
