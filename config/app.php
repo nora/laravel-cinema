@@ -182,6 +182,9 @@ return [
         // IDE Helper
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
+        //Cashier
+        Laravel\Cashier\CashierServiceProvider::class,
+
     ],
 
     /*

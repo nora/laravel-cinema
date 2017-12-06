@@ -22,6 +22,7 @@
     </ul>
 
     @include('reserve.partials.mov-info')
+
     <form class="reserve-area" name="zaseki" method="get"
           action="./{{$schedule->SCHEDULE_ID}}/ticket/">
         <div class="text">

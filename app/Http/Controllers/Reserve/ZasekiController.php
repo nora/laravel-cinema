@@ -9,6 +9,7 @@ use App\Movie;
 use App\Theater;
 use App\Schedule;
 use App\Seat;
+use App\SeatReserve;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -119,6 +120,45 @@ class ZasekiController extends Controller
                 'seats',
                 'show_date'
             )
+        );
+    }
+    public function payment(Request $request, $mov_id, $schedule_id){
+        $seatList = $request->session()->get('seats');
+
+        $movInfo = $this->movInfo;
+        $schedule = Schedule::find($schedule_id);
+        $schedule->date = $this->dateFormatFromSql('m月d日', $schedule->MOV_START_TIME);
+        $schedule->start = $this->dateFormatFromSql('H:i', $schedule->MOV_START_TIME);
+        $schedule->end = $this->dateFormatFromSql('H:i', $schedule->MOV_END_TIME);
+        $seats = Seat::whereIn('SEAT_ID', $seatList);
+
+        $params = $request->all();
+        foreach ($params as $key => $param) {
+            $params[$key] = urldecode($param);
+        }
+
+        return view('reserve.payment',
+            compact(
+                'movInfo',
+                'schedule',
+                'seats',
+                'show_date',
+                'params'
+            )
+        );
+    }
+    public function fin(Request $request){
+        $reserve = new SeatReserve();
+        $reserve->SEAT_ID = 1;
+        $reserve->USER_ID = 1;
+        $reserve->SCHEDULE_ID = 1;
+        $reserve->TICKET_CODE = 1;
+        $reserve->DEL_FLG = 0;
+
+        $reserve->save();
+        $movInfo = $this->movInfo;
+        return view('reserve.fin',
+            compact('movInfo')
         );
     }
 

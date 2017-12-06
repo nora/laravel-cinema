@@ -55,7 +55,7 @@
         </div>
     </div>
     <form class="reserve-area" name="zaseki" method="get"
-          action="./{{$schedule->SCHEDULE_ID}}/ticket/">
+          action="./payment/">
         <div class="text">
             <h3>お客様情報入力</h3>
         </div>
@@ -67,19 +67,19 @@
                 </li>
                 <li>
                     <label>氏名(かな)</label>
-                    <input type="text" name="name">
+                    <input type="text" name="kana">
                 </li>
                 <li>
                     <label>電話番号</label>
-                    <input type="text" name="name">
+                    <input type="tel" name="tel">
                 </li>
                 <li>
                     <label>メールアドレス</label>
-                    <input type="text" name="name">
+                    <input type="email" name="email">
                 </li>
                 <li>
                     <label>メールアドレス(確認)</label>
-                    <input type="text" name="name">
+                    <input type="email" name="email2">
                 </li>
             </ul>
         </div>

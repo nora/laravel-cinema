@@ -30,6 +30,12 @@ Route::prefix('reserve')->namespace('Reserve')
             ->get('/{mov_id}/{schedule_id}/user/','ZasekiController@user')
             ->where('mov_id', '[0-9]+')
             ->where('schedule_id', '[0-9]+');
+        Route::name('payment')
+            ->get('/{mov_id}/{schedule_id}/payment/','ZasekiController@payment')
+            ->where('mov_id', '[0-9]+')
+            ->where('schedule_id', '[0-9]+');
+        Route::name('fin')
+            ->post('/fin/','ZasekiController@fin');
         # /reserve/comment
         Route::name('/comment')
             ->middleware('auth')

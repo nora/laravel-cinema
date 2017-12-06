@@ -55,7 +55,7 @@
         </div>
     </div>
     <form class="reserve-area" name="zaseki" method="get"
-          action="./user">
+          action="../user">
         <div class="text">
             <h3>券種選択</h3>
             <p>鑑賞券の種類を選択してください。</p>
